@@ -9,9 +9,12 @@ I'm not sure what the intended solution was! This is just the best I could come 
 #Example input: 2, 3, 10
 #Example output: 2, 3, 4, 6, 8, 9, 10
 
-a = 3
-b = 2
-n = 10
+print("a?")
+a = int(input())
+print("b?")
+b = int(input())
+print("n?")
+n = int(input())
 
 #Positive multiples only
 if a < 0: a *= -1
