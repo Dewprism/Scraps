@@ -28,7 +28,6 @@ while highcounter <= n/high:
   if lowmultiple < highmultiple:
     print(lowmultiple)
     lowcounter += 1
-    lowmultiple = low * lowcounter
   else:
     if lowmultiple == highmultiple: lowcounter += 1
     print(highmultiple)
