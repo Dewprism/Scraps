@@ -20,22 +20,24 @@ n = int(input())
 if a < 0: a *= -1
 if b < 0: b *= -1
 
-high = max(a,b)
-low = min(a,b)
+high = highmultiple = max(a,b)
+low = lowmultiple = min(a,b)
 highcounter = 1
 lowcounter = 1
 
 while highcounter <= n/high:
-  highmultiple = high * highcounter
-  lowmultiple = low * lowcounter
   if lowmultiple < highmultiple:
     print(lowmultiple)
     lowcounter += 1
+    lowmultiple = low * lowcounter
   else:
-    if lowmultiple == highmultiple: lowcounter += 1
+    if lowmultiple == highmultiple: 
+      lowcounter += 1
+      lowmultiple = low * lowcounter
     print(highmultiple)
     highcounter += 1
+    highmultiple = high * highcounter
 while lowcounter <= n/low:
-  lowmultiple = low * lowcounter
-  lowcounter += 1
   print(lowmultiple)
+  lowcounter += 1
+  lowmultiple = low * lowcounter
